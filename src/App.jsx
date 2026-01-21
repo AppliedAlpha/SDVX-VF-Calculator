@@ -203,7 +203,7 @@ const VolforceTableView = ({ level, onLevelChange, constant, setConstant }) => {
 
   const tableRows = useMemo(() => {
     const maxPossibleVF = Number(constant) * 2 * 1.05 * 1.10;
-    const minVF = Number(constant) * 2 * 0.97 * 1.00 * 0.95;
+    const minVF = Number(constant) * 2 * 0.97 * 1.00 * 0.95 - 0.1;
 
     let rawRows = [];
     for (let target = Math.floor(maxPossibleVF * 10) / 10; target >= Math.floor(minVF * 10) / 10; target -= 0.1) {
